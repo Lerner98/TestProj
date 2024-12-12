@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import InputField from "./components/InputField";
-import Button from "./components/Button";
-import Result from "./components/Result";
+import InputField from "./Components/CinputField";
+import Button from "./Components/Cbutton";
+import Result from "./Components/CResult";
 
 function App() {
   const [num1, setNum1] = useState(0);
@@ -13,7 +13,15 @@ function App() {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
+    <div
+      style={{
+        textAlign: "center",
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+      }}
+    >
       <div style={{ marginBottom: "20px" }}>
         <InputField value={num1} onChange={setNum1} />
         <InputField value={num2} onChange={setNum2} />
